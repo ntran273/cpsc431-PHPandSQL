@@ -1,0 +1,23 @@
+SELECT 
+TeamRoster.Name_Last AS Lname,
+TeamRoster. Name_First AS Fname,
+TeamRoster.Street AS St,
+TeamRoster.City AS City,
+TeamRoster.State AS State,
+TeamRoster.Country AS Country,
+TeamRoster.ZipCode AS ZipCode,
+Count(Statistics.Player) AS GamePlayed,
+AVG(Statistics.PlayerTimeMin) As AvgTimeMin,
+AVG(Statistics.PlayerTimeSec) As AvgTimeSec,
+AVG(Statistics.Points) As Points,
+AVG(Statistics.Assists) As Assists,
+AVG(Statistics.Rebounds) As Rebounds
+
+FROM TeamRoster LEFT JOIN Statistics on
+Statistics.player = TeamRoster.id
+GROUP BY
+TeamRoster.Name_Last,	
+TeamRoster.Name_First
+ORDER BY
+TeamRoster.Name_Last,
+TeamRoster.Name_First;
