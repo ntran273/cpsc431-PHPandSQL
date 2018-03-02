@@ -1,0 +1,11 @@
+In html
+<?php
+while($stmt->fetch())
+$player = new address
+
+if($gamesplayed > 0 )
+
+$fmt_style
+else{
+Print empty cell
+}

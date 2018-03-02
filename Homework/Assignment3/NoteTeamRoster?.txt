@@ -1,0 +1,21 @@
+SELECT TeamRoster. Name ,….,…
+
+Count (statistic.player)
+
+AVG(…)
+
+From teamroster left join statistics on
+statistics.player = teamroster.id
+Groupby
+teamroster.name_last
+teamroster.name_first
+Orderby
+Teamroster.name_first
+teamroster.name_last
+
+
+
+$stmt =. Db->prepare($query);
+$stmt->execute();
+$stmt_>….
+
